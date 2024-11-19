@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta content-type="text/html" charset="UTF-8">
     <head>
         <style>
             h1{
@@ -42,11 +43,18 @@
             input{
                 border-radius: 5px;
                 font-family: monospace;
-                font-size: 15px;
                 text-align: center;
             }
         </style>
         <script>
+            function showPassword(){
+                var x = document.getElementById("password");
+                if(x.type=="password"){
+                    x.type = "text";
+                }else{
+                    x.type = "password";
+                }
+            }
         </script>
         <!--
         <br><br><br>
@@ -64,11 +72,15 @@
             <option value="dd">Gracie's Swipes</ption>
             <option value="gs">Tiger Bucks</option>
         </select>
-        <br><br>
+        <div class="space"></div>
         <text>Transfer To: </text>
-        <input type="text" placeholder="enter student email">
-        <br><br>
+        <input type="text" placeholder="student@rit.edu">
+        <div class="space"></div>
         <text>Amount: </text>
-        <input type="text" placeholder="enter dollar/swipe amount" size="25px">
+        <input type="text" placeholder="dollar/swipe amount">
+        <div class="gap"></div>
+        <text>Confirm Password:</text>
+        <input type="password" placeholder="password" id="password">
+        <input type="checkbox" onclick="showPassword();">Show Password
     </body>
 </html>

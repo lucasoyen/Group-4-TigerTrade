@@ -10,6 +10,6 @@ html,body{
     margin-top: 10px;
 }
 
-canvas {
-    display: block;
+.gap{
+    margin-top: 50px;
 }
