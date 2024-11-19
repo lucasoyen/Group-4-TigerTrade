@@ -2,8 +2,12 @@ html,body{
     margin: 0;
     padding: 0;
     font-family: monospace;
-    background-color: darkorange;
+    background-color: #f16900;
     text-align: center;
+}
+
+.space{
+    margin-top: 10px;
 }
 
 canvas {

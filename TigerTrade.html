@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <style>
+            h1{
+                font-size: 50px;
+                color: white;
+                outline: black;
+                text-shadow:
+                -2.5px -2.5px 0 #000,
+                2.5px -2.5px 0 #000,
+                -2.5px 2.5px 0 #000,
+                2.5px 2.5px 0 #000;  
+            }
+        </style>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>TigerTrade</title>
         <h1>TigerTrade</h1>
@@ -8,12 +20,20 @@
     <body>
         <style>
             button{
-                border-style: outset;
-                background-color: orange;
-                border-width: 3.5px;
+                border-style: double;
+                background-color: darkorange;
+                border-radius: 10px;
+                border-width: 10px;
                 font-family: monospace;
+                font-size: 30px;
+                color: white;
             }
         </style>
+        <script>
+            function login(){
+                window.open('TTLogin.html','_self');
+            }
+        </script>
         <!--
         <br><br><br>
         <button>
@@ -22,7 +42,7 @@
         <button>
             Transfer Tiger Bucks
         </button>-->
-        <button>
+        <button onclick="return login();">
             LOGIN
         </button>
     </body>

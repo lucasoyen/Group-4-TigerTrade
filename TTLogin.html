@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            h1{
+                font-size: 50px;
+                color: white;
+                outline: black;
+                text-shadow:
+                -2.5px -2.5px 0 #000,
+                2.5px -2.5px 0 #000,
+                -2.5px 2.5px 0 #000,
+                2.5px 2.5px 0 #000;  
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>duo security</title>
+        <h1>Login</h1>
+    </head>
+    <body>
+        <style>
+            button{
+                border-style: double;
+                background-color: darkorange;
+                border-radius: 10px;
+                border-width: 5px;
+                font-family: monospace;
+                font-size: 15px;
+                color: white;
+            }
+            input{
+                border-radius: 5px;
+                font-family: monospace;
+                font-size: 15px;
+            }
+        </style>
+        <script>
+            function showPassword() {
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+            function checkTextField(field) {
+                return field.value!="";
+            }
+            function homeScreen(){
+                if(checkTextField(password) && checkTextField(username)){
+                    window.open('TTHome.html','_self');
+                }
+            }
+        </script>
+        <!--
+        <br><br><br>
+        <button>
+            Transfer Dining Dollars
+        </button>
+        <button>
+            Transfer Tiger Bucks
+        </button>-->
+        <input type="text" placeholder="username" id="username"></input>
+        <div class="space"></div>
+        <input type="password" placeholder="password" id="password"></input>
+        <br>
+        <input type="checkbox" onclick="showPassword()">Show Password
+        <div class="space"></div>
+        <button onclick="return homeScreen();">
+            LOGIN
+        </button>
+    </body>
+</html>
