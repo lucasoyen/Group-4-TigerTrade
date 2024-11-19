@@ -48,7 +48,7 @@
             }
             function homeScreen(){
                 if(checkTextField(password) && checkTextField(username)){
-                    window.open('TTHome.html','_self');
+                    window.open('TTHome.html?username='+document.getElementById("username").value,'_self');
                 }
             }
         </script>

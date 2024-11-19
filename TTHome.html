@@ -23,11 +23,31 @@
                 1.5px 1.5px 0 #000;  
                 margin-bottom: 10px; 
             }
+            .right-corner{
+                position:fixed;
+                top: 0;
+                right: 0;
+                padding: 10px;
+            }
         </style>
+        <script>
+            function getUser(){
+                return new URLSearchParams(window.location.search).get("username");
+            }
+            function setUser(){
+                document.getElementById("user").innerHTML = getUser() + "&#x1F464";
+            }
+        </script>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>TigerTrade</title>
         <h1>TigerTrade</h1>
-        <h2>Transfer Funds</h2>
+        <h2 id="h2">Transfer Funds</h2>
+        <div class="right-corner" id="user"></div>
+        <script>
+            setUser();
+            var h2 = document.getElementById("h2");
+            h2.setHTMLUnsafe(h2.getHTML() + " from " + getUser());
+        </script>
     </head>
     <body>
         <style>
@@ -35,9 +55,9 @@
                 border-style: double;
                 background-color: darkorange;
                 border-radius: 10px;
-                border-width: 10px;
+                border-width:5px;
                 font-family: monospace;
-                font-size: 30px;
+                font-size: 15px;
                 color: white;
             }
             input{
@@ -80,7 +100,10 @@
         <input type="text" placeholder="dollar/swipe amount">
         <div class="gap"></div>
         <text>Confirm Password:</text>
+        <br>
         <input type="password" placeholder="password" id="password">
         <input type="checkbox" onclick="showPassword();">Show Password
+        <div class="gap"></div>
+        <button>Confirm Transfer</button>
     </body>
 </html>
